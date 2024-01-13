@@ -17,6 +17,11 @@ namespace BudicMarinAdresar
         {
             InitializeComponent();
         }
+        public void Init()
+        {
+            StoreAdresa store=new StoreAdresa();
+            cbOsobe.DataSource = store.GetOsoba();
+        }
         
         private void Kreiraj_Click(object sender, EventArgs e)
         {

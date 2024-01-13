@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbOsobe = new System.Windows.Forms.ComboBox();
             this.lbOsoba = new System.Windows.Forms.Label();
             this.ldCreateOsoba = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
@@ -48,13 +48,13 @@
             this.Kreiraj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbOsobe
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 0;
+            this.cbOsobe.FormattingEnabled = true;
+            this.cbOsobe.Location = new System.Drawing.Point(13, 30);
+            this.cbOsobe.Name = "cbOsobe";
+            this.cbOsobe.Size = new System.Drawing.Size(121, 24);
+            this.cbOsobe.TabIndex = 0;
             // 
             // lbOsoba
             // 
@@ -219,7 +219,7 @@
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.ldCreateOsoba);
             this.Controls.Add(this.lbOsoba);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbOsobe);
             this.Name = "Add";
             this.Text = "Add";
             this.ResumeLayout(false);
@@ -229,7 +229,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbOsobe;
         private System.Windows.Forms.Label lbOsoba;
         private System.Windows.Forms.Label ldCreateOsoba;
         private System.Windows.Forms.Label lbName;
