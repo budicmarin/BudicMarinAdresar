@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.txSearch = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgAdresar = new System.Windows.Forms.DataGridView();
             this.btAdd = new System.Windows.Forms.Button();
             this.btSearch = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAdresar)).BeginInit();
             this.SuspendLayout();
             // 
             // txSearch
@@ -43,15 +43,15 @@
             this.txSearch.Size = new System.Drawing.Size(615, 22);
             this.txSearch.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgAdresar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(615, 255);
-            this.dataGridView1.TabIndex = 1;
+            this.dgAdresar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAdresar.Location = new System.Drawing.Point(13, 55);
+            this.dgAdresar.Name = "dgAdresar";
+            this.dgAdresar.RowHeadersWidth = 51;
+            this.dgAdresar.RowTemplate.Height = 24;
+            this.dgAdresar.Size = new System.Drawing.Size(615, 255);
+            this.dgAdresar.TabIndex = 1;
             // 
             // btAdd
             // 
@@ -61,6 +61,7 @@
             this.btAdd.TabIndex = 2;
             this.btAdd.Text = "Dodaj";
             this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btSearch
             // 
@@ -70,6 +71,7 @@
             this.btSearch.TabIndex = 3;
             this.btSearch.Text = "Pretrazi";
             this.btSearch.UseVisualStyleBackColor = true;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // btDelete
             // 
@@ -88,11 +90,12 @@
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btSearch);
             this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgAdresar);
             this.Controls.Add(this.txSearch);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgAdresar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,7 +104,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgAdresar;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.Button btDelete;

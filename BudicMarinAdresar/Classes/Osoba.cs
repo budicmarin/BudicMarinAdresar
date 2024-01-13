@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BudicMarinAdresar
 {
-    internal class Osoba
+    public class Osoba
     {
         public int Id { get; set; }
         
