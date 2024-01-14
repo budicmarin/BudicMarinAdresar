@@ -38,33 +38,22 @@ namespace BudicMarinAdresar
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            Osoba osoba = new Osoba();
-          osoba=  osobe.Find(x => x.Ime == txSearch.Text);
-            if(osoba != null)
+            if (txSearch.Text == "")
             {
-                dgAdresar.DataSource = osoba;
+                Init();
             }
             else
             {
-                osoba = osobe.Find(x => x.Prezime == txSearch.Text);
-                if(osoba != null)
-                {
-                    dgAdresar.DataSource=osoba;
-                }
-                else
-                {
-                    osoba = osobe.Find(x => x.Id ==int.Parse( txSearch.Text));
-                    if(osoba != null)
-                    {
-                        dgAdresar.DataSource=osoba;
-                    }
-                    else
-                    {
-                        dgAdresar.DataSource = storeAdresa.GetOsoba();
-                    }
-                }
+                dgAdresar.DataSource = storeAdresa.GetOsobaByData(txSearch.Text);
             }
+           
 
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            dgAdresar.ClearSelection();
+       
         }
     }
 }
